@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priority Exercise — Greater Than Financial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div style="font-size:1.4rem;font-weight:800;color:#2B3990;letter-spacing:0.02em;margin-bottom:0.15rem;">
+        GREATER<span style="color:#00AEEF">THAN</span> FINANCIAL
+      </div>
+      <h1>Priority Exercise</h1>
+    </div>
+
+    <!-- WELCOME -->
+    <div id="screen-welcome" class="screen active">
+      <p class="welcome-text">
+        Now that the mortgage is behind you, there are a lot of exciting options ahead.
+        This short exercise will help clarify which goals matter most to <strong>you</strong>.
+      </p>
+      <p class="welcome-text">
+        You'll see two priorities at a time. Just pick the one that feels more important
+        — there are no wrong answers. It takes about <strong>3 minutes</strong>.
+      </p>
+      <p class="welcome-text">
+        <strong>Brett and Christina should each complete this separately</strong> so
+        Wakefield can see where you agree and where you differ.
+      </p>
+
+      <select id="name-select" class="name-select">
+        <option value="">Who's taking the exercise?</option>
+        <option value="Brett">Brett</option>
+        <option value="Christina">Christina</option>
+      </select>
+
+      <button id="start-btn" class="btn btn-primary" disabled>Let's go</button>
+    </div>
+
+    <!-- COMPARISON -->
+    <div id="screen-compare" class="screen">
+      <div class="progress-wrap">
+        <div class="progress-label" id="progress-label">1 of 28</div>
+        <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+
+      <p class="comparison-prompt">Which matters more to you right now?</p>
+
+      <div class="choices">
+        <button id="choice-a" class="choice-btn"></button>
+        <div class="vs-divider">or</div>
+        <button id="choice-b" class="choice-btn"></button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="screen-results" class="screen">
+      <p class="results-intro">
+        <strong><span id="results-name"></span>'s priorities</strong>, ranked by how often
+        you chose each one:
+      </p>
+
+      <ol class="results-list" id="results-list"></ol>
+
+      <div class="results-note">
+        This ranking reflects your gut instincts — which is the point! Wakefield will
+        use both your and your spouse's results to build a plan that honors what matters
+        most to each of you.
+      </div>
+
+      <button id="send-btn" class="btn btn-send" style="width:100%;">
+        Send my results to Wakefield
+      </button>
+      <div id="sent-msg" class="sent-msg" style="display:none;"></div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    &copy; Greater Than Financial LLC
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
